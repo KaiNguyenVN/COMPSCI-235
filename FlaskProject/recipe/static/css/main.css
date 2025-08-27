@@ -1,0 +1,86 @@
+/* set for all */
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+/* to set the recipe detail background */
+.bg {
+    background-color: lightgoldenrodyellow;
+}
+
+.bg2{
+    background-color: lightsteelblue;
+}
+
+/* for title */
+.title-decor{
+    display : flex;
+    justify-content: center;
+    color: darkblue;
+    padding: 8px;
+}
+
+/* for recipe in browse */
+.browse-decor{
+    display: grid;
+    justify-content: space-evenly;
+
+}
+
+.line{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.recipe-ingredients{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: darkslategray;
+    color: white;
+    padding: 2px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.splash {
+    justify-content: center;
+    color:white;
+    font-family: "Baskerville Old Face", Algerian, serif;
+}
+
+.about-info{
+    margin: 10px;
+    padding: 5px;
+    justify-content: center;
+    font-family: "Bookman Old Style", Arial Black, sans-serif;
+}
+
+.index-info{
+    background-color: lightslategray;
+}
+
+.dim {
+    filter:brightness(50%);
+}
+
+.browse-link{
+    justify-content: space-around;
+    padding: 20px;
+    margin: 10px;
+}
+
+.recipe-instructions{
+    padding: 15px;
+    margin: 3px;
+    font-family: 'Lucida Grande', Arial, sans-serif;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe</title>
+</head>
+<body>
+    <!-- Your content goes here -->
+    <h1>{{ recipe.name }}</h1>
+     
+    <div class="recipe-info">
+        <div class="recipe-description">
+            <h2>Description</h2>
+            <p>{{ recipe.description }}</p>
+                {% for img in recipe.images %}
+                    <img src="{{ img }}" alt="recipe photo">
+                {% endfor %}
+        </div>
+
+        <div class="recipe-ingredients">
+            <h2>Ingredients</h2>
+            <ul>
+                {% for item in recipe.ingredients %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="recipe_instructions">
+            <h2>Instructions</h2>
+            <ol>
+                {% for step in recipe.instructions %}
+                    <li>{{ step }}</li>
+                {% endfor %}
+            </ol>
+        </div>
+    </div>
+
+    {% include 'navbar.html' %}
+
+</body>
+</html>
+

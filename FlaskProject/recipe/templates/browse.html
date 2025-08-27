@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Recipes</title>
+    <link rel="stylesheet" href="../static/css/main.css">
+</head>
+
+<body class="bg2">
+     {% include 'navbar.html' %}
+
+     <nav class="title-decor">
+            <h1>Browse Recipes</h1>
+     </nav>
+
+<main>
+    <div class = "line">
+        <ul style = "list-style:none; display:flex; flex-wrap:wrap; gap:20px;">
+            {% for recipe in recipes %}
+            <li>
+                <a href="{{ url_for('recipe_detail_bp.recipe', recipe_id=recipe.id) }}">
+                    <div class = "browse-decor">
+                        <img src="{{ recipe.images[0] }}" alt="recipe photo" style="width:150px; height:150px">
+                        <span>{{ recipe.name }}</span>
+                    </div>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</main>
+
+</body>
+</html>
+
+
