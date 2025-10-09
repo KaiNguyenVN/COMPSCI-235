@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Browse Recipes</title>
+    <link rel="stylesheet" href="../static/css/main.css" />
+    <style> td {
+  height: 80px;
+  width: 160px;
+  text-align: center;
+  vertical-align: middle;
+}</style>
+</head>
+
+<body>
+
+    <header id="header">
+        <h1>CS235 2023: My Recipe Library</h1>
+        <div class="copyright">&copy; UPI1 | UPI2 | UPI3 (Write your full names or UPIs)</div>
+    </header>
+
+    <h1>Total Recipes - {{num_recipes}} </h1>
+
+
+    <!-- Recipes table layout -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>DESCRIPTION</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for recipe in recipes %}
+            <tr>
+                <td>
+                  {{recipe.recipe_id}}
+                </td>
+                <td>
+                    {{recipe.name}}
+                </td>
+                <td>
+                    {{recipe.description}}
+                </td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+
+</body>
+
+</html>
